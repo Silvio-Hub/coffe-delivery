@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CardsContainer } from "./cardsStyle";
-import { ShoppingCart } from "@phosphor-icons/react";
+import { ShoppingCart, ShoppingCartSimple } from "@phosphor-icons/react";
 
 interface IProduct {
   id: number;
@@ -47,7 +47,7 @@ export function ProductCards({ product }: productCardProps) {
     <CardsContainer>
       <div className="product-card">
         <div className="cards">
-          <img src={product.image} alt="xicara de café" />
+          <img src={product.image} alt="" />
           <p className="product-name">
             {Array.isArray(nameWithNoBreakSpace)
               ? nameWithNoBreakSpace.map((word, index) => (
@@ -64,15 +64,21 @@ export function ProductCards({ product }: productCardProps) {
           <h3>{product.description}</h3>
           <p className="card-information">{product.information}</p>
           <div className="productQuantity">
-            <span>R$ {product.price.toFixed(2)}</span>
-            <div>
-              <button onClick={decrementQuantity}>-</button>
-              <span>{quantity}</span>
-              <button onClick={incrementQuantity}>+</button>
+            <p className="pt-br">
+              R$ <span className="price">{product.price.toFixed(2)}</span>
+            </p>
+            <div className="group">
+              <div className="button-group">
+                <button className="minus" onClick={decrementQuantity}>
+                  &minus;
+                </button>
+                <span className="quantity">{quantity}</span>
+                <button onClick={incrementQuantity}>&#43;</button>
+              </div>
+              <a href="#" className="cards-cart">
+                <ShoppingCartSimple size={20} />
+              </a>
             </div>
-            <a href="#">
-              <ShoppingCart size={20} className="cart" />
-            </a>
           </div>
         </div>
       </div>
