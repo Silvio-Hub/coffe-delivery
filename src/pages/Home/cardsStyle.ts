@@ -137,6 +137,7 @@ export const CardsContainer = styled.div`
     color: ${(props) => props.theme["white"]};
     padding: 8px;
     border-radius: 5px;
-    text-decoration: none;
+    border: none;
+    cursor: pointer;
   }
 `;

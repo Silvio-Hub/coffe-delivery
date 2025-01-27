@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CardsContainer } from "./cardsStyle";
 import { ShoppingCartSimple } from "@phosphor-icons/react";
+import { useCart } from "./cartContext";
 
 interface IProduct {
   id: number;
@@ -17,6 +18,7 @@ interface productCardProps {
 
 export function ProductCards({ product }: productCardProps) {
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
 
   const incrementQuantity = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
@@ -26,6 +28,11 @@ export function ProductCards({ product }: productCardProps) {
     if (quantity > 1) {
       setQuantity((prevQuantity) => prevQuantity - 1);
     }
+  };
+
+  const handleAddToCart = () => {
+    addToCart(product.id, quantity);
+    setQuantity(1);
   };
 
   const noSplitWords: string[] = ["Com Leite", "Sem Açúcar", "Extra Forte"];
@@ -78,9 +85,9 @@ export function ProductCards({ product }: productCardProps) {
                 <span className="quantity">{quantity}</span>
                 <button onClick={incrementQuantity}>&#43;</button>
               </div>
-              <a href="#" className="cards-cart">
+              <button className="cards-cart" onClick={handleAddToCart}>
                 <ShoppingCartSimple size={20} />
-              </a>
+              </button>
             </div>
           </div>
         </div>

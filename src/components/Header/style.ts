@@ -71,4 +71,9 @@ export const NavbarContainer = styled.nav`
     margin-top: -2rem;
     margin-left: 2.9rem;
   }
+
+  .cart.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+  }
 `;
