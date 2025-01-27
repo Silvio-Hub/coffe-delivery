@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CardsContainer } from "./cardsStyle";
-import { ShoppingCart, ShoppingCartSimple } from "@phosphor-icons/react";
+import { ShoppingCartSimple } from "@phosphor-icons/react";
 
 interface IProduct {
   id: number;
@@ -65,7 +65,10 @@ export function ProductCards({ product }: productCardProps) {
           <p className="card-information">{product.information}</p>
           <div className="productQuantity">
             <p className="pt-br">
-              R$ <span className="price">{product.price.toFixed(2)}</span>
+              R${" "}
+              <span className="price">
+                {product.price.toFixed(2).replace(".", ",")}
+              </span>
             </p>
             <div className="group">
               <div className="button-group">

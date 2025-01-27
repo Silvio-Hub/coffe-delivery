@@ -22,7 +22,7 @@ export function ProductList() {
       name: "Tradicional",
       description: "Expresso Tradicional",
       information: "O tradicional café feito com água quente e grãos moídos",
-      price: 9.9,
+      price: 1.5,
       image: traditionalCoffe,
     },
     {
@@ -36,7 +36,7 @@ export function ProductList() {
     {
       id: 3,
       name: "Tradicional",
-      description: "Expresso Tradicional",
+      description: "Expresso Cremoso",
       information: "Café expresso tradicional com espuma cremosa",
       price: 1.5,
       image: cremoso,
@@ -44,7 +44,7 @@ export function ProductList() {
     {
       id: 4,
       name: "Tradicional Gelado",
-      description: "Expresso Americano",
+      description: "Expresso Gelado",
       information: "Bebida preparada com café expresso e cubos de gelo",
       price: 1.5,
       image: gelado,
@@ -52,7 +52,7 @@ export function ProductList() {
     {
       id: 5,
       name: "Tradicional Com Leite",
-      description: "Expresso Tradicional",
+      description: "Café com leite",
       information: "Meio a meio de expresso tradicional com leite vaporizado",
       price: 1.5,
       image: comLeite,
@@ -60,7 +60,7 @@ export function ProductList() {
     {
       id: 6,
       name: "Tradicional Com Leite",
-      description: "Expresso Americano",
+      description: "Latte",
       information:
         "Uma dose de café expresso com o dobro de leite e espuma cremosa",
       price: 1.5,
@@ -69,7 +69,7 @@ export function ProductList() {
     {
       id: 7,
       name: "Tradicional Com Leite",
-      description: "Expresso Tradicional",
+      description: "Capuccino",
       information:
         "Bebida com canela feita de doses iguais de café, leite e espuma",
       price: 1.5,
@@ -78,7 +78,7 @@ export function ProductList() {
     {
       id: 8,
       name: "Tradicional Com Leite",
-      description: "Expresso Americano",
+      description: "Macchiato",
       information:
         "Café expresso misturado com um pouco de leite quente e espuma",
       price: 1.5,
@@ -87,7 +87,7 @@ export function ProductList() {
     {
       id: 9,
       name: "Tradicional Com Leite",
-      description: "Expresso Tradicional",
+      description: "Mocaccino",
       information: "Café expresso com calda de chocolate, pouco leite e espuma",
       price: 1.5,
       image: mocaccino,
@@ -95,7 +95,7 @@ export function ProductList() {
     {
       id: 10,
       name: "Especial Com Leite",
-      description: "Expresso Americano",
+      description: "Chocolate Quente",
       information:
         "Bebida feita com chocolate dissolvido no leite quente e café",
       price: 1.5,
@@ -104,7 +104,7 @@ export function ProductList() {
     {
       id: 11,
       name: "Especial alcoólico gelado",
-      description: "Expresso Tradicional",
+      description: "Cubano",
       information:
         "Drink gelado de café expresso com rum, creme de leite e hortelã",
       price: 1.5,
@@ -113,7 +113,7 @@ export function ProductList() {
     {
       id: 12,
       name: "Especial",
-      description: "Expresso Americano",
+      description: "Havaiano",
       information: "Bebida adocicada preparada com café e leite de coco",
       price: 1.5,
       image: havaiano,
@@ -121,7 +121,7 @@ export function ProductList() {
     {
       id: 13,
       name: "EspecialA",
-      description: "Expresso Tradicional",
+      description: "Árabe",
       information: "Bebida preparada com grãos de café árabe e especiarias",
       price: 1.5,
       image: arabe,
@@ -129,7 +129,7 @@ export function ProductList() {
     {
       id: 14,
       name: "Especial Alcoólico",
-      description: "Expresso Americano",
+      description: "Irlandês",
       information: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
       price: 1.5,
       image: irlandes,

@@ -1,6 +1,7 @@
 import { MapPin, ShoppingCart } from "@phosphor-icons/react";
 import coffeLogo from "../../assets/Logo.svg";
 import { NavbarContainer } from "./style";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -12,9 +13,10 @@ export function Header() {
             <MapPin size={20} className="pin" />
             São Paulo, SP
           </span>
-          <a href="#">
-            <ShoppingCart size={20} className="cart" />
-          </a>
+          <Link to="/payment" className="cart">
+            <ShoppingCart size={20} className="cart-icon" />
+            <span className="count">3</span>
+          </Link>
         </nav>
       </div>
     </NavbarContainer>

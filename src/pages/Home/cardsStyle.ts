@@ -107,8 +107,6 @@ export const CardsContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 72px;
-    height: 38px; */
     gap: 0.6rem;
     padding: 10px;
     border-radius: 5px;

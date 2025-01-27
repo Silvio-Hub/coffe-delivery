@@ -45,7 +45,7 @@ export const NavbarContainer = styled.nav`
     margin-right: 0.3rem;
   }
 
-  a {
+  .cart {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,7 +56,19 @@ export const NavbarContainer = styled.nav`
     text-decoration: none;
   }
 
-  .cart {
+  .cart-icon {
     color: ${(props) => props.theme["yellow-dark"]};
+  }
+
+  .count {
+    font-size: ${(props) => props.theme["roboto-text-s"]};
+    border-radius: 50%;
+    position: absolute;
+    background: ${(props) => props.theme["yellow-dark"]};
+    color: ${(props) => props.theme["white"]};
+    width: 20px;
+    height: 20px;
+    margin-top: -2rem;
+    margin-left: 2.9rem;
   }
 `;
