@@ -1,13 +1,7 @@
-import {
-  Bank,
-  CreditCard,
-  CurrencyDollar,
-  MapPinLine,
-  Money,
-  Trash,
-} from "@phosphor-icons/react";
+import { Trash } from "@phosphor-icons/react";
 import { PaymentContainer } from "./style";
 import { IProduct, useCart } from "../../pages/Home/cartContext";
+import { AdressForm } from "../AdressForm";
 
 interface GroupedItem extends IProduct {
   quantity: number;
@@ -15,10 +9,6 @@ interface GroupedItem extends IProduct {
 
 export function Payment() {
   const { items, products, updateQuantity, removeFromCart } = useCart();
-
-  const handleCardClick = (event: React.MouseEvent) => {
-    event.preventDefault();
-  };
 
   const incrementQuantity = (productId: number) => {
     const item = items.find((item) => item.id === productId);
@@ -71,78 +61,7 @@ export function Payment() {
   return (
     <PaymentContainer>
       <div className="content">
-        <section>
-          <header>
-            <h1>Complete seu pedido</h1>
-          </header>
-          <form action="" className="teste">
-            <div className="adress">
-              <legend>
-                <span>
-                  <MapPinLine size={22} />
-                </span>
-                Endereço de Entrega
-              </legend>
-              <p className="delivery-address">
-                Informe o endereço onde deseja receber seu pedido
-              </p>
-              <div className="adress-group">
-                <div className="cep">
-                  <input type="text" placeholder="CEP" />
-                </div>
-                <div className="street">
-                  <input type="text" placeholder="Rua" />
-                </div>
-                <div className="number-complement">
-                  <input type="text" placeholder="Número" />
-                  <div className="complement">
-                    <input type="text" placeholder="Complemento" />
-                    <span className="optional">Opcional</span>
-                  </div>
-                </div>
-                <div className="district">
-                  <input type="text" placeholder="Bairro" />
-                  <input type="text" placeholder="Cidade" />
-                  <input type="text" placeholder="UF" />
-                </div>
-              </div>
-            </div>
-
-            <div className="payment">
-              <p className="title">
-                <span>
-                  <CurrencyDollar size={32} className="icon" />
-                </span>
-                Pagamento
-              </p>
-              <p className="text">
-                O pagamento é feito na entrega. Escolha a forma que deseja pagar
-              </p>
-
-              <div className="button-group">
-                <button onClick={handleCardClick}>
-                  <span>
-                    <CreditCard size={32} className="icon" />
-                  </span>
-                  Cartão de credito
-                </button>
-                <button onClick={handleCardClick}>
-                  <span>
-                    <Bank size={32} className="icon" />
-                  </span>
-                  Cartão de débito
-                </button>
-                <button onClick={handleCardClick}>
-                  <span>
-                    <Money size={32} className="icon" />
-                  </span>
-                  Dinheiro
-                </button>
-              </div>
-            </div>
-          </form>
-        </section>
-
+        <AdressForm />
         <section>
           <header>
             <h1>Cafés selecionados</h1>
@@ -155,7 +74,7 @@ export function Payment() {
                   <img src={item.image} alt={item.name} className="image" />
                 </div>
                 <div className="teste1">
-                  <p>{item.name}</p>
+                  <p>{item.description}</p>
                   <div className="increment-group">
                     <div className="increment-button">
                       <button
@@ -207,6 +126,12 @@ export function Payment() {
           </div>
         </section>
       </div>
+
+      {/* <div className="payment-summary">
+        <p>
+          <strong>Método de Pagamento:</strong> {metodoPagamento}
+        </p>
+      </div> */}
     </PaymentContainer>
   );
 }

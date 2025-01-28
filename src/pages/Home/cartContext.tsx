@@ -32,6 +32,14 @@ interface ICartItem {
   quantity: number;
 }
 
+// interface FormData {
+//   cep: string;
+//   rua: string;
+//   bairro: string;
+//   cidade: string;
+//   uf: string;
+// }
+
 interface ICartContext {
   items: ICartItem[];
   products: IProduct[];
