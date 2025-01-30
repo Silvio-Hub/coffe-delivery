@@ -49,7 +49,7 @@ export const FormContainer = styled.div`
     margin-top: 2rem;
   }
 
-  .cep {
+  .zipCode {
     width: 40%;
   }
 
@@ -110,7 +110,6 @@ export const FormContainer = styled.div`
 
   .payment .title {
     display: flex;
-    align-items: center;
   }
 
   .title span .icon {

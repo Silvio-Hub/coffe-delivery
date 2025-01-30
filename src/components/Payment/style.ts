@@ -21,7 +21,7 @@ export const PaymentContainer = styled.nav`
     background: ${(props) => props.theme["base-card"]};
     padding: 3rem;
     margin-top: 1rem;
-    border-radius: 5px 30px;
+    border-radius: 5px 40px;
   }
 
   .purchase-orders {

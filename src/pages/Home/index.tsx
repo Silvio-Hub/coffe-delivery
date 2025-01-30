@@ -1,7 +1,7 @@
 import { HeaderContainer } from "./style";
 import coffeCup from "../../assets/img/Imagem.png";
 import { Coffee, Package, ShoppingCart, Timer } from "@phosphor-icons/react";
-import { ProductList } from "./productList";
+import { ProductList } from "../ProductList";
 
 export function Home() {
   return (

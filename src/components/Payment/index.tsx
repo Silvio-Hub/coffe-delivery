@@ -1,7 +1,10 @@
 import { Trash } from "@phosphor-icons/react";
 import { PaymentContainer } from "./style";
-import { IProduct, useCart } from "../../pages/Home/cartContext";
+import { IProduct, useCart } from "../../contexts/cartContext";
 import { AdressForm } from "../AdressForm";
+import { useNavigate } from "react-router-dom";
+import { FormContext } from "../../contexts/FormContext";
+import { useContext } from "react";
 
 interface GroupedItem extends IProduct {
   quantity: number;
@@ -9,6 +12,8 @@ interface GroupedItem extends IProduct {
 
 export function Payment() {
   const { items, products, updateQuantity, removeFromCart } = useCart();
+  const { formData, formErrors } = useContext(FormContext);
+  const navigate = useNavigate();
 
   const incrementQuantity = (productId: number) => {
     const item = items.find((item) => item.id === productId);
@@ -56,6 +61,35 @@ export function Payment() {
 
   const handleRemoveItem = (productId: number) => {
     removeFromCart(productId);
+  };
+
+  const handleRedirect = () => {
+    const hasErrors = Object.values(formErrors).some((error) => error !== "");
+    if (hasErrors) {
+      alert("Por favor, preencha o formulário corretamente.");
+      return;
+    }
+
+    const isFormValid =
+      formData.street &&
+      formData.residentialNumber &&
+      formData.district &&
+      formData.city;
+
+    if (!isFormValid) {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      return;
+    }
+
+    navigate("/confirmation", {
+      state: {
+        formData,
+        groupedItems,
+        total: calculateTotal(),
+        deliveryFee: 3.5,
+        finalPrice: calculateFinalPrice(),
+      },
+    });
   };
 
   return (
@@ -121,17 +155,13 @@ export function Payment() {
                 </p>
               </div>
 
-              <button className="confirm">Confirmar pedido</button>
+              <button onClick={handleRedirect} className="confirm">
+                Confirmar pedido
+              </button>
             </div>
           </div>
         </section>
       </div>
-
-      {/* <div className="payment-summary">
-        <p>
-          <strong>Método de Pagamento:</strong> {metodoPagamento}
-        </p>
-      </div> */}
     </PaymentContainer>
   );
 }

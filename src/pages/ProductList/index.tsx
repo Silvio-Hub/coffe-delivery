@@ -1,12 +1,12 @@
-import { CardsContainer } from "./cardsStyle";
-import { useCart } from "./cartContext";
-import { ProductCards } from "./productCards";
+import { useCart } from "../../contexts/cartContext";
+import { ProductCards } from "../ProductCards";
+import { ProductListContainer } from "./style";
 
 export function ProductList() {
   const { products } = useCart();
 
   return (
-    <CardsContainer>
+    <ProductListContainer>
       <div className="product-list-container">
         <h2>Nossos cafés</h2>
         <div className="product-list">
@@ -15,6 +15,6 @@ export function ProductList() {
           ))}
         </div>
       </div>
-    </CardsContainer>
+    </ProductListContainer>
   );
 }

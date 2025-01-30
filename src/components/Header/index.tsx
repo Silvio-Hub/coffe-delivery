@@ -1,18 +1,20 @@
 import { MapPin, ShoppingCart } from "@phosphor-icons/react";
 import coffeLogo from "../../assets/Logo.svg";
 import { NavbarContainer } from "./style";
-import { Link } from "react-router-dom";
-import { useCart } from "../../pages/Home/cartContext";
+import { Link, useLocation } from "react-router-dom";
+import { useCart } from "../../contexts/cartContext";
 
 export function Header() {
   const { getTotalQuantity } = useCart();
   const totalQuantity = getTotalQuantity();
+  const location = useLocation();
 
   const handleCartClick = (event: React.MouseEvent) => {
     if (totalQuantity < 1) {
       event.preventDefault();
     }
   };
+  const isConfirmationPage = location.pathname === "/confirmation";
 
   return (
     <NavbarContainer>
@@ -29,7 +31,7 @@ export function Header() {
             onClick={handleCartClick}
           >
             <ShoppingCart size={20} className="cart-icon" />
-            {totalQuantity > 0 && (
+            {!isConfirmationPage && totalQuantity > 0 && (
               <span className="count">{getTotalQuantity()}</span>
             )}
           </Link>

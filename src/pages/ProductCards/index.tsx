@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { CardsContainer } from "./cardsStyle";
 import { ShoppingCartSimple } from "@phosphor-icons/react";
-import { useCart } from "./cartContext";
+import { useCart } from "../../contexts/cartContext";
+import { ProductCardContainer } from "./style";
 
 interface IProduct {
   id: number;
@@ -51,7 +51,7 @@ export function ProductCards({ product }: productCardProps) {
   });
 
   return (
-    <CardsContainer>
+    <ProductCardContainer>
       <div className="product-card">
         <div className="cards">
           <img src={product.image} alt="" />
@@ -92,6 +92,6 @@ export function ProductCards({ product }: productCardProps) {
           </div>
         </div>
       </div>
-    </CardsContainer>
+    </ProductCardContainer>
   );
 }
