@@ -53,26 +53,24 @@ export const PaymentContainer = styled.nav`
     width: 64px;
   }
 
-  .increment-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: ${(props) => props.theme["base-button"]};
-  }
-
   .quantity {
     font-size: ${(props) => props.theme["roboto-text-m"]};
     color: ${(props) => props.theme["base-title"]};
   }
 
+  .increment-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+    background-color: ${(props) => props.theme["base-button"]};
+  }
+
   .increment-button button {
-    width: 14px;
-    height: 14px;
-    font-size: 25px;
-    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,6 +78,17 @@ export const PaymentContainer = styled.nav`
     color: ${(props) => props.theme["purple"]};
     border: none;
     cursor: pointer;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .increment-button button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .increment-button button:hover {
+    color: ${(props) => props.theme["purple-dark"]};
   }
 
   .increment-group {
@@ -88,17 +97,25 @@ export const PaymentContainer = styled.nav`
     margin-top: 0.5rem;
   }
 
-  .remove {
+  .remove button {
     display: flex;
     align-items: center;
-    padding: 0.5rem;
-    border-radius: 8px;
+    padding: 0.6rem;
+    border-radius: 5px;
     background-color: ${(props) => props.theme["base-button"]};
     font-size: 0.7rem;
     color: ${(props) => props.theme["base-text"]};
     text-transform: uppercase;
     border: none;
     cursor: pointer;
+  }
+
+  .remove button:hover {
+    background-color: ${(props) => props.theme["base-hover"]};
+  }
+
+  .remove button:hover .remove-icon {
+    color: ${(props) => props.theme["purple-dark"]};
   }
 
   .remove-icon {
@@ -146,6 +163,10 @@ export const PaymentContainer = styled.nav`
     text-transform: uppercase;
     font-size: ${(props) => props.theme["roboto-button-g"]};
     cursor: pointer;
+  }
+
+  .confirm:hover {
+    background-color: ${(props) => props.theme["yellow-dark"]};
   }
 
   .text-description {

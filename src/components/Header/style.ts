@@ -60,6 +60,13 @@ export const NavbarContainer = styled.nav`
     color: ${(props) => props.theme["yellow-dark"]};
   }
 
+  .cart:focus,
+  .cart:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+
   .count {
     font-size: ${(props) => props.theme["roboto-text-s"]};
     border-radius: 50%;

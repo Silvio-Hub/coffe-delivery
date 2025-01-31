@@ -2,7 +2,7 @@ import { MapPin, ShoppingCart } from "@phosphor-icons/react";
 import coffeLogo from "../../assets/Logo.svg";
 import { NavbarContainer } from "./style";
 import { Link, useLocation } from "react-router-dom";
-import { useCart } from "../../contexts/cartContext";
+import { useCart } from "../../contexts/CartContext";
 
 export function Header() {
   const { getTotalQuantity } = useCart();

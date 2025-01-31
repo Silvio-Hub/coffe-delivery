@@ -73,7 +73,9 @@ export const ConfirmationContainer = styled.div`
 
   .image {
     text-align: right;
-    /* width: 492px;
-    height: 293px; */
+  }
+
+  .bold {
+    font-weight: bold;
   }
 `;

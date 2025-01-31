@@ -56,6 +56,11 @@ export const ProductCardContainer = styled.div`
     justify-content: center;
   }
 
+  .group button {
+    outline: none;
+    box-shadow: none;
+  }
+
   img {
     height: 7.5rem;
     width: 7.5;
@@ -106,6 +111,10 @@ export const ProductCardContainer = styled.div`
     cursor: pointer;
   }
 
+  .button-group button:hover {
+    color: ${(props) => props.theme["purple-dark"]};
+  }
+
   .cards-cart {
     background-color: ${(props) => props.theme["purple-dark"]};
     color: ${(props) => props.theme["white"]};
@@ -113,5 +122,9 @@ export const ProductCardContainer = styled.div`
     border-radius: 5px;
     border: none;
     cursor: pointer;
+  }
+
+  .cards-cart.clicked {
+    background-color: ${(props) => props.theme["purple"]};
   }
 `;

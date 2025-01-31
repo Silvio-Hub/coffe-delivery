@@ -1,4 +1,4 @@
-import { FormContainer } from "./style";
+import { FormContainer, PaymentMethod } from "./style";
 import { useContext, useState } from "react";
 import axios from "axios";
 import {
@@ -13,7 +13,7 @@ import { FormContext, FormData } from "../../contexts/FormContext";
 export function AdressForm() {
   const { formData, setFormData, setPaymentMethod } = useContext(FormContext);
 
-  const [erroCep, setErroCep] = useState("");
+  const [{}, setErroCep] = useState("");
   const [formErrors, setFormErrors] = useState({
     zipCode: "",
     street: "",
@@ -190,45 +190,42 @@ export function AdressForm() {
               </div>
             </div>
           </div>
-
-          <div className="payment">
-            <p className="title">
-              <span>
-                <CurrencyDollar size={32} className="icon" />
-              </span>
-              Pagamento
-            </p>
-            <p className="text">
-              O pagamento é feito na entrega. Escolha a forma que deseja pagar
-            </p>
-
-            <div className="button-group">
-              <button
-                onClick={(e) => handleClickPayment(e, "Cartão de Crédito")}
-              >
-                <span>
-                  <CreditCard size={32} className="icon" />
-                </span>
-                Cartão de credito
-              </button>
-              <button
-                onClick={(e) => handleClickPayment(e, "Cartão de Débito")}
-              >
-                <span>
-                  <Bank size={32} className="icon" />
-                </span>
-                Cartão de débito
-              </button>
-              <button onClick={(e) => handleClickPayment(e, "Dinheiro")}>
-                <span>
-                  <Money size={32} className="icon" />
-                </span>
-                Dinheiro
-              </button>
-            </div>
-          </div>
         </form>
       </section>
+      <PaymentMethod>
+        <div className="payment">
+          <p className="title">
+            <span>
+              <CurrencyDollar size={32} className="icon" />
+            </span>
+            Pagamento
+          </p>
+          <p className="text">
+            O pagamento é feito na entrega. Escolha a forma que deseja pagar
+          </p>
+
+          <div className="button-group">
+            <button onClick={(e) => handleClickPayment(e, "Cartão de Crédito")}>
+              <span>
+                <CreditCard size={32} className="icon" />
+              </span>
+              Cartão de credito
+            </button>
+            <button onClick={(e) => handleClickPayment(e, "Cartão de Débito")}>
+              <span>
+                <Bank size={32} className="icon" />
+              </span>
+              Cartão de débito
+            </button>
+            <button onClick={(e) => handleClickPayment(e, "Dinheiro")}>
+              <span>
+                <Money size={32} className="icon" />
+              </span>
+              Dinheiro
+            </button>
+          </div>
+        </div>
+      </PaymentMethod>
     </FormContainer>
   );
 }

@@ -6,6 +6,8 @@ import { useContext } from "react";
 
 export function Confirmation() {
   const { formData, paymentMethod } = useContext(FormContext);
+  const deliveryAddress = `${formData.street}, ${formData.residentialNumber}${formData.complement ? " - " + formData.complement : ""}`;
+  const districtAddress = `${formData.district} - ${formData.city}, ${formData.uf}`;
 
   return (
     <ConfirmationContainer>
@@ -21,11 +23,9 @@ export function Confirmation() {
             </span>
             <div>
               <p>
-                Entrega em {formData.street}, {formData.residentialNumber}
+                Entrega em <span className="bold">{deliveryAddress}</span>
               </p>
-              <p>
-                {formData.district} - {formData.city}, {formData.uf}
-              </p>
+              <p>{districtAddress}</p>
             </div>
           </div>
           <div className="delivery-information">
@@ -34,7 +34,7 @@ export function Confirmation() {
             </span>
             <div>
               <p>Previsão de entrega</p>
-              <p>20 min - 30 min</p>
+              <p className="bold">20 min - 30 min</p>
             </div>
           </div>
           <div className="delivery-information">
@@ -43,7 +43,7 @@ export function Confirmation() {
             </span>
             <div>
               <p>Pagamento na entrega</p>
-              <p>{paymentMethod}</p>
+              <p className="bold">{paymentMethod}</p>
             </div>
           </div>
         </div>

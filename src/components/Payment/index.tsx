@@ -1,6 +1,6 @@
 import { Trash } from "@phosphor-icons/react";
 import { PaymentContainer } from "./style";
-import { IProduct, useCart } from "../../contexts/cartContext";
+import { IProduct, useCart } from "../../contexts/CartContext";
 import { AdressForm } from "../AdressForm";
 import { useNavigate } from "react-router-dom";
 import { FormContext } from "../../contexts/FormContext";
@@ -122,13 +122,12 @@ export function Payment() {
                         &#43;
                       </button>
                     </div>
-                    <button
-                      className="remove"
-                      onClick={() => handleRemoveItem(item.id)}
-                    >
-                      <Trash size={32} className="remove-icon" />
-                      Remover
-                    </button>
+                    <div className="remove">
+                      <button onClick={() => handleRemoveItem(item.id)}>
+                        <Trash size={32} className="remove-icon" />
+                        Remover
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <p className="order-price">

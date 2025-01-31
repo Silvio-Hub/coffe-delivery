@@ -37,12 +37,6 @@ export const FormContainer = styled.div`
     margin-top: 1rem;
   }
 
-  .content {
-    gap: 2rem;
-    display: grid;
-    grid-template-columns: 60% 1fr;
-  }
-
   .adress-group {
     display: grid;
     gap: 1rem;
@@ -101,7 +95,9 @@ export const FormContainer = styled.div`
     color: ${(props) => props.theme["base-label"]};
     font-size: ${(props) => props.theme["roboto-text-s"]};
   }
+`;
 
+export const PaymentMethod = styled.div`
   .payment {
     background-color: ${(props) => props.theme["base-card"]};
     padding: 3rem;
@@ -149,6 +145,11 @@ export const FormContainer = styled.div`
     font-size: ${(props) => props.theme["roboto-button-m"]};
     color: ${(props) => props.theme["base-text"]};
     text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .button-group button:hover {
+    background-color: ${(props) => props.theme["base-hover"]};
   }
 
   .button-group span {
