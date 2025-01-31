@@ -91,7 +91,7 @@ export function ProductCards({ product }: productCardProps) {
                 className={`cards-cart ${clicked ? "clicked" : ""}`}
                 onClick={handleAddToCart}
               >
-                <ShoppingCartSimple size={20} />
+                <ShoppingCartSimple size={20} weight="fill" />
               </button>
             </div>
           </div>

@@ -118,7 +118,7 @@ export const ProductCardContainer = styled.div`
   .cards-cart {
     background-color: ${(props) => props.theme["purple-dark"]};
     color: ${(props) => props.theme["white"]};
-    padding: 8px;
+    padding: 7px;
     border-radius: 5px;
     border: none;
     cursor: pointer;

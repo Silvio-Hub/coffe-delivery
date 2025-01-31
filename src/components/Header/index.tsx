@@ -1,11 +1,11 @@
-import { MapPin, ShoppingCart } from "@phosphor-icons/react";
+import { House, MapPin, ShoppingCart } from "@phosphor-icons/react";
 import coffeLogo from "../../assets/Logo.svg";
 import { NavbarContainer } from "./style";
 import { Link, useLocation } from "react-router-dom";
 import { useCart } from "../../contexts/CartContext";
 
 export function Header() {
-  const { getTotalQuantity } = useCart();
+  const { getTotalQuantity, resetCart } = useCart();
   const totalQuantity = getTotalQuantity();
   const location = useLocation();
 
@@ -16,13 +16,22 @@ export function Header() {
   };
   const isConfirmationPage = location.pathname === "/confirmation";
 
+  const handleBackHome = () => {
+    resetCart();
+  };
+
   return (
     <NavbarContainer>
       <div className="navbar">
         <img src={coffeLogo} alt="" />
         <nav>
+          {isConfirmationPage && (
+            <Link to="/" className="home" onClick={handleBackHome}>
+              <House size={30} />
+            </Link>
+          )}
           <span>
-            <MapPin size={20} className="pin" />
+            <MapPin size={20} weight="fill" className="pin" />
             São Paulo, SP
           </span>
           <Link
@@ -30,7 +39,7 @@ export function Header() {
             className={`cart ${totalQuantity < 1 ? "disabled" : ""}`}
             onClick={handleCartClick}
           >
-            <ShoppingCart size={20} className="cart-icon" />
+            <ShoppingCart size={20} weight="fill" className="cart-icon" />
             {!isConfirmationPage && totalQuantity > 0 && (
               <span className="count">{getTotalQuantity()}</span>
             )}

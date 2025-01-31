@@ -16,25 +16,25 @@ export function Home() {
           <div className="information">
             <div className="cart">
               <span className="cartIcon icon1">
-                <ShoppingCart size={16} />
+                <ShoppingCart size={16} weight="fill" />
               </span>
               <p>Compra simples e segura</p>
             </div>
             <div className="cart">
               <span className="cartIcon icon2">
-                <Package size={16} />
+                <Package size={16} weight="fill" />
               </span>
               <p>Embalagem mantém o café intacto</p>
             </div>
             <div className="cart">
               <span className="cartIcon icon3">
-                <Timer size={16} />
+                <Timer size={16} weight="fill" />
               </span>
               <p>Entrega rápida e rastreada</p>
             </div>
             <div className="cart">
               <span className="cartIcon icon4">
-                <Coffee size={16} />
+                <Coffee size={16} weight="fill" />
               </span>
               <p>O café chega fresquinho até você</p>
             </div>

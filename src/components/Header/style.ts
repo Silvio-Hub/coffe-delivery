@@ -83,4 +83,18 @@ export const NavbarContainer = styled.nav`
     pointer-events: none;
     cursor: not-allowed;
   }
+
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+
+  .home:focus,
+  .home:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
 `;

@@ -39,6 +39,7 @@ interface ICartContext {
   updateQuantity: (productId: number, quantity: number) => void;
   getTotalQuantity: () => number;
   removeFromCart: (productId: number) => void;
+  resetCart: () => void;
 }
 
 const CartContext = createContext<ICartContext | undefined>(undefined);
@@ -196,6 +197,10 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     setItems((prevItems) => prevItems.filter((item) => item.id !== productId));
   };
 
+  const resetCart = () => {
+    setItems([]);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -205,6 +210,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
         updateQuantity,
         getTotalQuantity,
         removeFromCart,
+        resetCart,
       }}
     >
       {children}
