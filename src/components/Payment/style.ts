@@ -4,6 +4,7 @@ export const PaymentContainer = styled.nav`
   max-width: 1240px;
   margin: 0 auto;
   padding: 2rem;
+  margin-top: 8rem;
 
   h1 {
     font-family: "Baloo 2";

@@ -52,7 +52,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       name: "Tradicional",
       description: "Expresso Tradicional",
       information: "O tradicional café feito com água quente e grãos moídos",
-      price: 1.5,
+      price: 8.0,
       image: traditionalCoffe,
     },
     {
@@ -60,7 +60,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       name: "Tradicional",
       description: "Expresso Americano",
       information: "Expresso diluído, menos intenso que o tradicional",
-      price: 1.5,
+      price: 8.5,
       image: americano,
     },
     {
@@ -68,7 +68,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       name: "Tradicional",
       description: "Expresso Cremoso",
       information: "Café expresso tradicional com espuma cremosa",
-      price: 1.5,
+      price: 12.0,
       image: cremoso,
     },
     {
@@ -76,7 +76,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       name: "Tradicional Gelado",
       description: "Expresso Gelado",
       information: "Bebida preparada com café expresso e cubos de gelo",
-      price: 1.5,
+      price: 14.0,
       image: gelado,
     },
     {
@@ -84,7 +84,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       name: "Tradicional Com Leite",
       description: "Café com leite",
       information: "Meio a meio de expresso tradicional com leite vaporizado",
-      price: 1.5,
+      price: 10.5,
       image: comLeite,
     },
     {
@@ -93,7 +93,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       description: "Latte",
       information:
         "Uma dose de café expresso com o dobro de leite e espuma cremosa",
-      price: 1.5,
+      price: 14.5,
       image: latte,
     },
     {
@@ -102,7 +102,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       description: "Capuccino",
       information:
         "Bebida com canela feita de doses iguais de café, leite e espuma",
-      price: 1.5,
+      price: 14.9,
       image: capuccino,
     },
     {
@@ -111,7 +111,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       description: "Macchiato",
       information:
         "Café expresso misturado com um pouco de leite quente e espuma",
-      price: 1.5,
+      price: 11.9,
       image: macchiato,
     },
     {
@@ -119,7 +119,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       name: "Tradicional Com Leite",
       description: "Mocaccino",
       information: "Café expresso com calda de chocolate, pouco leite e espuma",
-      price: 1.5,
+      price: 16.0,
       image: mocaccino,
     },
     {
@@ -128,7 +128,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       description: "Chocolate Quente",
       information:
         "Bebida feita com chocolate dissolvido no leite quente e café",
-      price: 1.5,
+      price: 9.5,
       image: chocolate,
     },
     {
@@ -137,7 +137,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       description: "Cubano",
       information:
         "Drink gelado de café expresso com rum, creme de leite e hortelã",
-      price: 1.5,
+      price: 18.0,
       image: cubano,
     },
     {
@@ -145,15 +145,15 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       name: "Especial",
       description: "Havaiano",
       information: "Bebida adocicada preparada com café e leite de coco",
-      price: 1.5,
+      price: 14.0,
       image: havaiano,
     },
     {
       id: 13,
-      name: "EspecialA",
+      name: "Especial",
       description: "Árabe",
       information: "Bebida preparada com grãos de café árabe e especiarias",
-      price: 1.5,
+      price: 14.5,
       image: arabe,
     },
     {
@@ -161,7 +161,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       name: "Especial Alcoólico",
       description: "Irlandês",
       information: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
-      price: 1.5,
+      price: 25.0,
       image: irlandes,
     },
   ]);
