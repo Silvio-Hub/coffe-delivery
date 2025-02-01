@@ -1,5 +1,5 @@
 import { House, MapPin, ShoppingCart } from "@phosphor-icons/react";
-import coffeLogo from "../../assets/Logo.svg";
+import coffeLogo from "../../assets/svg/Logo.svg";
 import { NavbarContainer } from "./style";
 import { Link, useLocation } from "react-router-dom";
 import { useCart } from "../../contexts/CartContext";
