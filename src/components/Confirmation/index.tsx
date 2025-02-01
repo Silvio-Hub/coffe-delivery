@@ -1,6 +1,6 @@
 import { CurrencyDollar, MapPin, Timer } from "@phosphor-icons/react";
 import { ConfirmationContainer } from "./style";
-import motorcycle from "../../assets/img/delivery.png";
+import motorcycle from "/img/delivery.png";
 import { FormContext } from "../../contexts/FormContext";
 import { useContext } from "react";
 

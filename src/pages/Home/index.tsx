@@ -1,6 +1,5 @@
 import { BackgroundContainer, HeaderContainer } from "./style";
-import coffeCup from "../../assets/img/Imagem.png";
-// import BackgroundSVG from "../../assets/img/Vector1.png";
+import coffeCup from "/img/Imagem.png";
 import { Coffee, Package, ShoppingCart, Timer } from "@phosphor-icons/react";
 import { ProductList } from "../ProductList";
 

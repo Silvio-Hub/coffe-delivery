@@ -1,18 +1,18 @@
 import React, { createContext, ReactNode, useContext, useState } from "react";
-import traditionalCoffe from "../assets/img/traditional-coffee.png";
-import americano from "../assets/img/american-coffee.png";
-import cremoso from "../assets/img/cremoso-coffee.png";
-import gelado from "../assets/img/gelado-coffee.png";
-import comLeite from "../assets/img/tradicional-com-leite.png";
-import latte from "../assets/img/late-coffee.png";
-import capuccino from "../assets/img/capuccino.png";
-import macchiato from "../assets/img/macchiato.png";
-import mocaccino from "../assets/img/mocaccino.png";
-import chocolate from "../assets/img/chocolate.png";
-import cubano from "../assets/img/cubano.png";
-import havaiano from "../assets/img/havaiano.png";
-import arabe from "../assets/img/árabe.png";
-import irlandes from "../assets/img/irlandês.png";
+import traditionalCoffe from "/img/traditional-coffee.png";
+import americano from "/img/american-coffee.png";
+import cremoso from "/img/cremoso-coffee.png";
+import gelado from "/img/gelado-coffee.png";
+import comLeite from "/img/tradicional-com-leite.png";
+import latte from "/img/late-coffee.png";
+import capuccino from "/img/capuccino.png";
+import macchiato from "/img/macchiato.png";
+import mocaccino from "/img/mocaccino.png";
+import chocolate from "/img/chocolate.png";
+import cubano from "/img/cubano.png";
+import havaiano from "/img/havaiano.png";
+import arabe from "/img/árabe.png";
+import irlandes from "/img/irlandês.png";
 
 interface CartProviderProps {
   children: ReactNode;
